@@ -18,7 +18,7 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 1px solid red;
+	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -83,6 +83,12 @@ nav {
 	align-items: center;
 }
 
+.nav-a {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
 nav a {
 	color: #808080;
 	text-decoration: none;
@@ -130,10 +136,12 @@ button {
 }
 
 .main-content {
+    display: flex;
+    flex-wrap: wrap;
 	margin-top: 10%;
 	margin-bottom: 5%;
 	padding: 5% 0;
-	border-top: 1px solid black;
+	border-top: 2px solid black;
 	border-bottom: 1px solid black;
 }
 
@@ -149,7 +157,8 @@ button {
 
 .top-2{
 	display: flex;
-	justify-content: space-between;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .content-box-top {
@@ -163,7 +172,8 @@ button {
 
 .bottom-3{
 	display: flex;
-	justify-content: space-between;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .content-box-bottom {
@@ -223,7 +233,15 @@ footer {
     }
 
     nav {
-        flex-wrap: wrap;
+        flex-wrap: wrap-reverse;
+    }
+
+    nav img{
+        margin-bottom: 5%;
+    }
+
+    .nav-a {
+        width: 100%;
     }
 
     .nav-img {
@@ -242,5 +260,45 @@ footer {
 }
 
 @media (max-width: 500px) {
+    nav {
+        flex-wrap: wrap-reverse;
+    }
 
+    nav img{
+        margin: 2.5% 0;
+    }
+
+    .nav-a {
+        flex-wrap: wrap;
+    }
+
+    nav a{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        font-size: 24px;
+        padding: 2.5% 0;
+        border-bottom: 1px solid #808080;
+    }
+    .main-content {}
+
+    .content-box-top {
+        width: 100%;
+    }
+    
+    .content-box-top:nth-child(2) {
+        padding-top: 5%;
+    }
+
+    .content-box-bottom {
+        width: 100%;
+    }
+
+    .content-box-bottom:nth-child(2) {
+        padding-top: 5%;
+    }
+
+    .content-box-bottom:nth-child(3) {
+        padding-top: 5%;
+    }
 }
