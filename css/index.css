@@ -121,7 +121,8 @@ h1 {
 button {
 	width: 35%;
 	font-size: 24px;
-	background-color: white;
+    background: white;
+    border: 2px solid black;
 }
 
 .cta-box-2 {
